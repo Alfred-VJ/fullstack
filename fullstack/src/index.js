@@ -7,6 +7,7 @@ import ParrafoUno from "./components/ParrafoUno";
 import Suma from "./components/Suma";
 import ContadorAndDecrementadorAndMultiplicador from "./components/Aumentar";
 import JuntarDosEstados from "./components/JuntarDosEstados";
+import ManejoComplejo from "./components/ManejoComplejo";
 
 const App = () => {
   const course = "Half Stack application development";
@@ -36,6 +37,9 @@ const App = () => {
       <ContadorAndDecrementadorAndMultiplicador />
       <div />
       <JuntarDosEstados />
+      <hr />
+      <div />
+      <ManejoComplejo />
     </div>
   );
 };
