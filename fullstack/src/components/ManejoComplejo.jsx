@@ -7,35 +7,35 @@ const ManejoComplejo = () => {
     segundo: 0,
     tercero: 0,
     cuarto: 0,
-    cliks: 0,
+    contador: 0,
   });
 
   const estadosUno = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       primero: multiplesEstados.primero + 1,
-      cliks: multiplesEstados.cliks + 1,
+      contador: multiplesEstados.contador + 1,
     });
   };
   const estadosDos = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       segundo: multiplesEstados.segundo + 1,
-      cliks: multiplesEstados.cliks + 1,
+      contador: multiplesEstados.contador + 1,
     });
   };
   const estadosTres = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       tercero: multiplesEstados.tercero + 1,
-      cliks: multiplesEstados.cliks + 1,
+      contador: multiplesEstados.contador + 1,
     });
   };
   const estadosCuatro = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       cuarto: multiplesEstados.cuarto + 1,
-      cliks: multiplesEstados.cliks + 1,
+      contador: multiplesEstados.contador + 1,
     });
   };
 
@@ -43,35 +43,35 @@ const ManejoComplejo = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       primero: multiplesEstados.primero - 1,
-      cliks: multiplesEstados.cliks - 1,
+      contador: multiplesEstados.contador - 1,
     });
   };
   const estadosDosR = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       segundo: multiplesEstados.segundo - 1,
-      cliks: multiplesEstados.cliks - 1,
+      contador: multiplesEstados.contador - 1,
     });
   };
   const estadosTresR = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       tercero: multiplesEstados.tercero - 1,
-      cliks: multiplesEstados.cliks - 1,
+      contador: multiplesEstados.contador - 1,
     });
   };
   const estadosCuatroR = () => {
     setMultiplesEstados({
       ...multiplesEstados,
       cuarto: multiplesEstados.cuarto - 1,
-      cliks: multiplesEstados.cliks - 1,
+      contador: multiplesEstados.contador - 1,
     });
   };
 
   const reiniciar = () => {
     setMultiplesEstados({
       ...multiplesEstados,
-      cliks: multiplesEstados.cliks === 0,
+      contador: multiplesEstados.contador === 0,
     });
   };
 
@@ -94,7 +94,7 @@ const ManejoComplejo = () => {
       <button onClick={estadosCuatro}>Amuneta</button>
       <button onClick={estadosCuatroR}>Decremetar</button>
       <br />
-      <HUno count={multiplesEstados.cliks} />
+      <HUno count={multiplesEstados.contador} />
       <button onClick={reiniciar}>Reinicio</button>
       <br />
     </>

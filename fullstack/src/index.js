@@ -8,6 +8,7 @@ import Suma from "./components/Suma";
 import ContadorAndDecrementadorAndMultiplicador from "./components/Aumentar";
 import JuntarDosEstados from "./components/JuntarDosEstados";
 import ManejoComplejo from "./components/ManejoComplejo";
+import ContadorConValorInicial from "./components/ConValorInicial";
 
 const App = () => {
   const course = "Half Stack application development";
@@ -40,6 +41,9 @@ const App = () => {
       <hr />
       <div />
       <ManejoComplejo />
+      <hr />
+      <div />
+      <ContadorConValorInicial />
     </div>
   );
 };
