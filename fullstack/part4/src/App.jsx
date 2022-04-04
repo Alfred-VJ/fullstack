@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Render } from "./components/Render";
+import axios from "axios";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -10,11 +11,10 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       let url = "https://jsonplaceholder.typicode.com/posts";
-      fetch(url)
-        .then((res) => res.json())
-        .then((json) => {
-          setData(json);
-        });
+      axios.get(url).then((res) => {
+        const { data } = res;
+        setData(data);
+      });
       setLoading(false);
     }, 1000);
   }, []);
