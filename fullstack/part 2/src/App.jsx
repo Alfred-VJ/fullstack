@@ -9,7 +9,8 @@ const Agregar = (props) => {
     console.log(event.target.value);
     setNewNotes(event.target.value);
   };
-  const handleClick = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     console.log("agregar");
     const newNoteAdd = {
       id: notes.length + 1,
@@ -37,9 +38,10 @@ const Agregar = (props) => {
           />
         ))}
       </ol>
-      <div />
-      <input type="text" onChange={handleChange} value={newNotes} />
-      <button onClick={handleClick}>Agrega</button>
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={handleChange} value={newNotes} />
+        <button>Agrega</button>
+      </form>
     </>
   );
 };
