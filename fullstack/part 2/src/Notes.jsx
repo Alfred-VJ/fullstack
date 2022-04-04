@@ -1,13 +1,11 @@
 import React from "react";
 
-const RenderLista = ({ content, date }) => {
+export const Notes = ({ content, date }) => {
   return (
     <>
+      <hr />
       <li>{content}</li>
       <p>{date}</p>
-      <hr />
     </>
   );
 };
-
-export default RenderLista;
